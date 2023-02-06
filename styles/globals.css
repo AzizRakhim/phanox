@@ -334,6 +334,7 @@ span.text-red {
   overflow: auto;
   max-height: 70vh;
   padding: 20px 10px;
+  background-color: #fff;
 }
 .product {
   display: flex;
@@ -345,6 +346,7 @@ span.text-red {
   height: 150px;
   border-radius: 15px;
   background-color: #ebebeb;
+  object-fit: contain;
 }
 .item-desc .flex {
   display: flex;
@@ -863,7 +865,29 @@ span.text-red {
     width: auto;
     height: 102vh;
   }
+
+  .cart-bottom {
+    padding: 10px;
+    background-color: #fff;
+  }
+
+  .btn-container .btn {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 370px) {
+  .product {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    border-bottom: 1px solid #000;
+  }
+
+  .product .cart-product-image {
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
