@@ -349,9 +349,15 @@ span.text-red {
 .item-desc .flex {
   display: flex;
   justify-content: space-between;
-  width: 350px;
+  align-items: center;
+  width: 100%;
   color: #324d67;
 }
+
+.item-desc {
+  flex-grow: 1;
+}
+
 .item-desc .bottom {
   margin-top: 60px;
 }
@@ -379,12 +385,13 @@ span.text-red {
   position: absolute;
   bottom: 12px;
   right: 5px;
-  width: 100%;
+  width: calc(100% - 5px);
   padding: 30px 65px;
 }
 
 .btn-container {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: auto;
 }
 .btn {
@@ -394,7 +401,6 @@ span.text-red {
   border-radius: 15px;
   border: none;
   font-size: 20px;
-  margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
   background-color: #f02d34;
@@ -518,6 +524,7 @@ span.text-red {
 .quantity-desc {
   border: 1px solid gray;
   padding: 6px;
+  margin-top: 5px !important;
 }
 .quantity-desc span {
   font-size: 16px;
@@ -525,15 +532,17 @@ span.text-red {
   cursor: pointer;
 }
 .quantity-desc .minus {
-  border-right: 1px solid gray;
   color: #f02d34;
+  padding-left: 6px;
 }
 .quantity-desc .num {
   border-right: 1px solid gray;
+  border-left: 1px solid gray;
   font-size: 20px;
 }
 .quantity-desc .plus {
   color: rgb(49, 168, 49);
+  padding-right: 6px;
 }
 
 .maylike-products-wrapper {
@@ -610,6 +619,16 @@ span.text-red {
   margin-top: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .buttons .add-to-cart {
+    width: max-content;
+  }
+
+  .buttons .buy-now {
+    width: max-content;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .hero-banner-container {
     height: 560px;
@@ -672,6 +691,7 @@ span.text-red {
   }
   .product-detail-container {
     flex-wrap: wrap;
+    justify-content: center;
   }
   .product-detail-container .product-detail-image {
     width: 350px;
@@ -705,7 +725,8 @@ span.text-red {
   }
 
   .item-desc .flex {
-    width: 200px;
+    width: 100%;
+    max-width: 100%;
   }
   .top {
     flex-wrap: wrap;
@@ -750,7 +771,8 @@ span.text-red {
     font-size: 17px;
   }
   .btn-container {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     margin: auto;
   }
 }
@@ -818,4 +840,30 @@ span.text-red {
   .banner-desc .right h3 {
     line-height: 1.1;
   }
+
+  .buttons .add-to-cart {
+    width: max-content;
+  }
+  .buttons .buy-now {
+    width: max-content;
+  }
+
+  .product-detail-container .product-detail-image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .cart-wrapper {
+    width: auto;
+    height: auto;
+    bottom: 0;
+  }
+
+  .cart-container {
+    width: auto;
+    height: 102vh;
+  }
+}
+
+@media screen and (max-width: 370px) {
 }
