@@ -78,7 +78,7 @@ function Cart() {
             cartItems.map((item, i) => (
               <div className="product" key={item?._id + i}>
                 <img
-                  src={urlFor(item?.image[0])}
+                  src={urlFor(item?.image[0] ? item.image[0] : "")}
                   alt="product"
                   className="cart-product-image"
                 />
