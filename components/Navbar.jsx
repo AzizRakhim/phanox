@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div className="navbar-container">
       <p>
-        <Link href={"/"}>Aziz Rakhim Headphones</Link>
+        <Link href={"/"}>PHANOX</Link>
       </p>
       <button
         type="button"
