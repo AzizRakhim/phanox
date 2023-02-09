@@ -26,7 +26,6 @@ export const StateContext = ({ children }) => {
   };
 
   const onAdd = (product, quantity) => {
-    console.log(cartItems);
     const checkProductInCart = cartItems?.find(
       (item) => item?._id === product._id
     );

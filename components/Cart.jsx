@@ -45,11 +45,7 @@ function Cart() {
   };
 
   return (
-    <div
-      className="cart-wrapper"
-      ref={cartRef}
-      onClick={() => setShowCart(false)}
-    >
+    <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
         <button
           type="button"
