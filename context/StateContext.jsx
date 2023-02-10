@@ -11,7 +11,6 @@ export const StateContext = ({ children }) => {
   const [qty, setQty] = useState(1);
 
   let foundProduct;
-  let index;
 
   const incQty = () => {
     setQty((prevQty) => prevQty + 1);
@@ -55,8 +54,7 @@ export const StateContext = ({ children }) => {
   };
 
   const toggleCartItemQuantity = (id, value) => {
-    foundProduct = cartItems.find((item) => item._id === id);
-    index = cartItems.findIndex((product) => product._id === id);
+    const foundProduct = cartItems.find((item) => item._id === id);
 
     if (value === "inc") {
       const newCartItems = cartItems.map((item) => {

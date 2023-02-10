@@ -27,6 +27,8 @@ function Cart() {
   const handleCheckout = async () => {
     const stripe = await getStripe();
 
+    toast.loading("Redirecting...");
+
     const response = await fetch("/api/stripe", {
       method: "POST",
       headers: {
@@ -38,8 +40,6 @@ function Cart() {
     if (response.statusCode === 500) return;
 
     const data = await response.json();
-
-    toast.loading("Redirecting...");
 
     stripe.redirectToCheckout({ sessionId: data.id });
   };
